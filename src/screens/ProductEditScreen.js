@@ -66,7 +66,11 @@ const ProductEditScreen = ({ location }) => {
         },
       }
 
-      const { data } = await axios.post('/api/uploads', formData, config)
+      const { data } = await axios.post(
+        'https://proshop-server.onrender.com/api/uploads',
+        formData,
+        config
+      )
       console.log(data)
       setImage(data)
       setUploading(false)
